@@ -2,11 +2,13 @@ package net.lukas.tutorialmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.lukas.tutorialmod.block.ModBlocks;
 import net.lukas.tutorialmod.component.ModDataComponentTypes;
 import net.lukas.tutorialmod.item.ModItemGroups;
 import net.lukas.tutorialmod.item.ModItems;
+import net.lukas.tutorialmod.util.HammerUsageEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,6 +28,8 @@ public class TutorialMod implements ModInitializer {
 		ModDataComponentTypes.registerDataComponentTypes();
 
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 3200);
+
+		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 
 	}
 }
