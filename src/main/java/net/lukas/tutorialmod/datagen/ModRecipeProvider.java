@@ -61,5 +61,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(recipeExporter);
 
 
+        offerSmithingTrimRecipe(recipeExporter,ModItems.KAUPEN_SMITHING_TEMPLATE, Identifier.of(TutorialMod.MOD_ID,"kaupen"));
+
+
     }
 }
