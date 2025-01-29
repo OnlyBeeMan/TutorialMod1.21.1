@@ -71,6 +71,10 @@ public class ModItems {
              SmithingTemplateItem.of(Identifier.of(TutorialMod.MOD_ID,"kaupen"), FeatureFlags.VANILLA));
 
 
+    public static final Item KAUPEN_BOW = registerItem("kaupen_bow",
+            new BowItem(new Item.Settings().maxDamage(500)));
+
+
 
 
 
