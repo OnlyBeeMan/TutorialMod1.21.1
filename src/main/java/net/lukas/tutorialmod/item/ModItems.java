@@ -5,6 +5,7 @@ import net.lukas.tutorialmod.TutorialMod;
 import net.lukas.tutorialmod.item.custom.ChiselItem;
 import net.lukas.tutorialmod.item.custom.HammerItem;
 import net.lukas.tutorialmod.item.custom.ModArmorItem;
+import net.lukas.tutorialmod.sound.ModSounds;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -73,6 +74,11 @@ public class ModItems {
 
     public static final Item KAUPEN_BOW = registerItem("kaupen_bow",
             new BowItem(new Item.Settings().maxDamage(500)));
+
+
+
+    public static final Item BAR_BRAWL_MUSIC_DISC = registerItem("bar_brawl_music_disc",
+            new Item(new Item.Settings().jukeboxPlayable(ModSounds.BAR_BRAWL_KEY).maxCount(1)));
 
 
 
