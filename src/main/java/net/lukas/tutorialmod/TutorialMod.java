@@ -9,6 +9,7 @@ import net.lukas.tutorialmod.block.ModBlocks;
 import net.lukas.tutorialmod.component.ModDataComponentTypes;
 import net.lukas.tutorialmod.item.ModItemGroups;
 import net.lukas.tutorialmod.item.ModItems;
+import net.lukas.tutorialmod.sound.ModSounds;
 import net.lukas.tutorialmod.util.HammerUsageEvent;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -31,6 +32,8 @@ public class TutorialMod implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		ModSounds.registerSounds();
 
 		ModDataComponentTypes.registerDataComponentTypes();
 
