@@ -1,0 +1,16 @@
+{
+  "asset_id": "tutorialmod:saw_them",
+  "height": 2,
+  "width": 2,
+  "author": {
+
+    "translate": "painting.tutorialmod.saw_them.author"
+
+  },
+
+  "title": {
+
+    "translate": "painting.tutorialmod.saw_them.title"
+
+  }
+}

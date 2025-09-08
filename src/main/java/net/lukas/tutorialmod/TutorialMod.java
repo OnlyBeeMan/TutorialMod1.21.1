@@ -4,18 +4,23 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
+import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.lukas.tutorialmod.block.ModBlocks;
 import net.lukas.tutorialmod.component.ModDataComponentTypes;
 import net.lukas.tutorialmod.effect.ModEffects;
 import net.lukas.tutorialmod.item.ModItemGroups;
 import net.lukas.tutorialmod.item.ModItems;
+import net.lukas.tutorialmod.potion.ModPotions;
 import net.lukas.tutorialmod.sound.ModSounds;
 import net.lukas.tutorialmod.util.HammerUsageEvent;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.passive.SheepEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.Items;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.Potions;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import org.slf4j.Logger;
@@ -33,6 +38,8 @@ public class TutorialMod implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		ModPotions.registerPotions();
 
 		ModSounds.registerSounds();
 
@@ -53,6 +60,10 @@ public class TutorialMod implements ModInitializer {
 				return ActionResult.PASS;
 			}
 			return ActionResult.PASS;
+		});
+
+		FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
+			builder.registerPotionRecipe(Potions.AWKWARD, Items.SLIME_BALL, ModPotions.SLIMEY_POTION);
 		});
 
 	}
