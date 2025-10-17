@@ -9,6 +9,7 @@ import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.lukas.tutorialmod.block.ModBlocks;
 import net.lukas.tutorialmod.component.ModDataComponentTypes;
 import net.lukas.tutorialmod.effect.ModEffects;
+import net.lukas.tutorialmod.enchantment.ModEnchantmentEffects;
 import net.lukas.tutorialmod.item.ModItemGroups;
 import net.lukas.tutorialmod.item.ModItems;
 import net.lukas.tutorialmod.potion.ModPotions;
@@ -44,6 +45,8 @@ public class TutorialMod implements ModInitializer {
 		ModSounds.registerSounds();
 
 		ModEffects.registerEffects();
+
+		ModEnchantmentEffects.registerEnchantmentEffects();
 
 		ModDataComponentTypes.registerDataComponentTypes();
 
