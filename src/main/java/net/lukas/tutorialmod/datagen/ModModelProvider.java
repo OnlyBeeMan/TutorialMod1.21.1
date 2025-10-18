@@ -3,6 +3,7 @@ package net.lukas.tutorialmod.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.lukas.tutorialmod.block.ModBlocks;
+import net.lukas.tutorialmod.block.custom.CauliflowerCropBlock;
 import net.lukas.tutorialmod.block.custom.PinkGarnetLampBlock;
 import net.lukas.tutorialmod.item.ModItems;
 import net.minecraft.data.client.*;
@@ -39,6 +40,7 @@ public class ModModelProvider extends FabricModelProvider {
                 .coordinate(BlockStateModelGenerator.createBooleanModelMap(PinkGarnetLampBlock.CLICKED, lampOnIdentifier, lampOffIdentifier)));
 
 
+        blockStateModelGenerator.registerCrop(ModBlocks.CAULIFLOWER_CROP, CauliflowerCropBlock.AGE,0,1,2,3,4,5,6);
     }
 
     @Override
